@@ -99,3 +99,57 @@ a{
     position: absolute;
     bottom: 0;
 }
+/* ***** SECTION SELL MORE ***** */
+
+.sell__more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 840px;
+    background-image: url(../assets/Background.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    /* background-size: contain; */
+}
+.sell__more__title{
+    font-size: 49px;
+    font-family: var(--font-raleway);
+    font-weight: var(--raleway-regular);
+    margin-top: 130px;
+    margin-bottom: 20px;
+}
+.sell__more__text{
+    font-size: 16px;
+    font-family: var(--font-open-sans);
+    font-weight: var(--open-sans-regular);
+    margin-bottom: 38px;
+}
+.sell__more__btn{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 67px;
+    animation: pulse 1.5s infinite alternate; /* Animacja pulsowania */
+}
+.sell__more__btn:hover{
+    box-shadow: 0px 10px 20px 0px rgba(123, 206, 241, 1);
+}
+.sell__more__btn:active{
+    background-color: #FB3B64;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1); /* Początkowy rozmiar */
+    }
+    100% {
+      transform: scale(1.02); /* Końcowy rozmiar */
+    }
+  }
+
+  .sell__more__img{
+    
+  }
