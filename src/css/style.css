@@ -1,0 +1,17 @@
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+/* zmienne */
+:root{
+    --page-width: 1352px;
+    --main-blue: #08A6E4;
+}
+/* czcionki */
+/* kolory */
+/* ogólne ustawienia dla linków */
+a{
+    color: white;
+    text-decoration: none;
+}
