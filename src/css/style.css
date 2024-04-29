@@ -1,3 +1,4 @@
+
 body{
     background-color: #000;
     color: #fff;
@@ -6,12 +7,29 @@ body{
 /* zmienne */
 :root{
     --page-width: 1352px;
-    --main-blue: #08A6E4;
+    --color-primary: #08A6E4;
+    --color-primary-shadow:rgba(7,172,230, .16);
+    --color-redish:#FB3B64;
+    --color-green:#55dfb4;
+    --color-black:#000;
+    --color-gray:#a5a5a5;
+    --color-light-grey:#f7f7f7;
+    --color-white:#fff;
+    --font-open-sans:"Open Sans",Arial, sans-serif;
+    --font-raleway:"Raleway",Arial, sans-serif;
+    --open-sans-regular:400;
+    --open-sans-light:300;
+    --open-sans-bold:700;
+    --raleway-light:300;
+    --raleway-regular:400;
+    --raleway-bold:700;
+    --raleway-extra-bold:700;
 }
-/* czcionki */
-/* kolory */
-/* ogólne ustawienia dla linków */
-a{
-    color: white;
+
+.buttonsBasic{
+    color: var(--color-white);
     text-decoration: none;
+    padding: 16px 56px;
+    border-radius: 60px;
+    background-color: var(--color-primary);
 }
