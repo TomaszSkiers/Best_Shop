@@ -9,6 +9,7 @@ body{
 nie stylować .class img */
 /* pomajstrować z max-width */
 /* poprawić bem */
+/* pozamieniać jednostki na rem em */
 
 /* zmienne */
 :root{
@@ -342,8 +343,34 @@ a{
     white-space: pre;
 }
 .benefit__description--box__three{
-    margin-right: 20px;
+    margin-left: 35px;
 }
 .benefit__description--box__three::after{
-    border: 2px solid var(--color-primary);
+    border: 2px solid var(--color-green);
+}
+.benefit__container--box__three{
+    background-color: transparent;
+}
+.benefit__text--box__three{
+    width: 623px;
+    height: 100%;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.benefit__img--box__three{
+    width: 440px;
+    height: 100%;
+    margin: 0;
+    border-radius: 4px;
+    background-color: var(--color-green);
+}
+.benefit__photo--box__three{
+    width: 296px;
+    height: 207px;
+    position: absolute;
+    bottom: 64px;
+    left: 62px;
 }
