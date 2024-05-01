@@ -243,32 +243,42 @@ a{
     height: var(--benefit-container-height);
     background-color: var(--color-white);
     border-radius: 5px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.benefit__text p::before{
-    content: "Be always first";
+
+/*--- emementy wspólny dla każdego .benefit__description------  */
+.benefit__description::before{
     font-size: 36px;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-regular);
-
 }
-.benefit__text p{
+.benefit__description{
+    width: 416px;
+    height: 188px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 416px;
-    height: 188px;
-    /* border: 1px solid darkblue; */
-     margin-left: 35px;
+    /* border: 1px solid darkblue; */  
 }
-.benefit__text p::after{
+.benefit__description::after{
     content: "";
     width: 328px;
+}
+/* ---------------------------------------------------  */
+.benefit__description--box__one::before{
+    content: "Be always first";
+}
+.benefit__description--box__one{
+
+    margin-left: 35px;
+
+}
+.benefit__description--box__one::after{
     border: 2px solid var(--color-redish);
 }
+
 .benefit__img{
     /* border: 1px solid rgb(150, 7, 145); */
     position: relative;
@@ -276,20 +286,64 @@ a{
     margin-top: 113px;
     align-self: flex-start;
 }
-.rectangle{
+.rect__circ{
+    position: absolute;
+    z-index: 0;
+}
+.rect__circ--box__one{
     width: 180px;
     height: 180px;
     background-color: var(--color-redish);
     border-radius: 41px;
-    position: absolute;
+    
     bottom: 165px;
     left: 305px;
     transform: translate(-50%, 50%) rotate(45deg);
-    z-index: 0;
 }
-.benefit__img img{
+.benefit__photo{
+    /* wydzielić wspólne elementy i nadać box__one box__two */
     width: 387px;
     height: 219px;
     position: relative;
     z-index: 1;
+}
+.benefit__img--box__two{
+    margin-top: 29px;
+    margin-left: 70px;
+}
+.benefit__container--box__two{
+    flex-direction: row-reverse;
+}
+.benefit__photo--box__two{
+    width: 426px;
+    height: 328px;
+}
+.rect__circ--box__two{
+    width: 320px;
+    height: 320px;
+    background-color: #07ACE6;
+    border-radius: 50%;
+    bottom: 24px;
+    left: 0;
+}
+.benefit__description--box__two::before{
+    content: "Your shop \a is where you are ";
+    white-space: pre;
+}
+.benefit__description--box__two{
+    margin-right: 20px;
+}
+.benefit__description--box__two::after{
+    border: 2px solid var(--color-primary);
+}
+/* --------------------------------------------- */
+.benefit__description--box__three::before{
+    content: "Incerase recognition \a your brand ";
+    white-space: pre;
+}
+.benefit__description--box__three{
+    margin-right: 20px;
+}
+.benefit__description--box__three::after{
+    border: 2px solid var(--color-primary);
 }
