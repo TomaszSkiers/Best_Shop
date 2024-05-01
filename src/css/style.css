@@ -237,7 +237,8 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 38px;
+    padding: 105px 0;
 }
 .benefit__container{
     width: var(--benefit-container-width);
@@ -337,7 +338,7 @@ a{
 .benefit__description--box__two::after{
     border: 2px solid var(--color-primary);
 }
-/* --------------------------------------------- */
+
 .benefit__description--box__three::before{
     content: "Incerase recognition \a your brand ";
     white-space: pre;
@@ -374,3 +375,6 @@ a{
     bottom: 64px;
     left: 62px;
 }
+
+/* ***** pricing section ***** */
+
