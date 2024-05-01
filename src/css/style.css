@@ -5,11 +5,18 @@ body{
     font-family: var(--font-open-sans);
     font-size: 16px;
 }
+/* do każdego elementu dodać klasę 
+nie stylować .class img */
+/* pomajstrować z max-width */
+/* poprawić bem */
 
 /* zmienne */
 :root{
     --page-width: 1352px;
+    --benefit-container-width:1124px;
+    --benefit-container-height:370px;
     --section-statistics-height: 530px;
+    --benefits-section-height: 1395px;
     --section-benefit-width: 1124px; 
     --section-benefit-height: 370px;
     --section-benefit-wrapper:1395px;
@@ -62,6 +69,12 @@ a{
 
 .header{
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-white);
+    opacity: 0.97;
+    z-index: 100;
 }
 .header__container{
     justify-content: space-between;
@@ -154,15 +167,11 @@ a{
 
 .statistics__section{
     width: 100%;
-    height: 530px;
+    height: var(--section-statistics-height);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-
-
-    border: 1px solid rebeccapurple;
-    margin-bottom: 500px;
 }
 .statistics__wrapper{
     display: flex;
@@ -216,4 +225,71 @@ a{
 }
 .statistics__wrapper .statistic__box:nth-child(3) .circle{
     background-color: var(--color-green);
+}
+
+/* ***** benefits section ***** */
+
+.benefits{
+    height: var(--benefits-section-height);
+    width: 100%;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.benefit__container{
+    width: var(--benefit-container-width);
+    height: var(--benefit-container-height);
+    background-color: var(--color-white);
+    border-radius: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    
+}
+.benefit__text p::before{
+    content: "Be always first";
+    font-size: 36px;
+    font-family: var(--font-raleway);
+    font-weight: var(--raleway-regular);
+
+}
+.benefit__text p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 416px;
+    height: 188px;
+    /* border: 1px solid darkblue; */
+     margin-left: 35px;
+}
+.benefit__text p::after{
+    content: "";
+    width: 328px;
+    border: 2px solid var(--color-redish);
+}
+.benefit__img{
+    /* border: 1px solid rgb(150, 7, 145); */
+    position: relative;
+    margin-right: 118px;
+    margin-top: 113px;
+    align-self: flex-start;
+}
+.rectangle{
+    width: 180px;
+    height: 180px;
+    background-color: var(--color-redish);
+    border-radius: 41px;
+    position: absolute;
+    bottom: 165px;
+    left: 305px;
+    transform: translate(-50%, 50%) rotate(45deg);
+    z-index: 0;
+}
+.benefit__img img{
+    width: 387px;
+    height: 219px;
+    position: relative;
+    z-index: 1;
 }
