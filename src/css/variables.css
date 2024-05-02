@@ -1,0 +1,32 @@
+:root{
+    --page-width: 1352px;
+    --benefit-container-width:1124px;
+    --benefit-container-height:370px;
+    --section-statistics-height: 530px;
+    --benefits-section-height: 1395px;
+    --section-benefit-width: 1124px; 
+    --section-benefit-height: 370px;
+    --section-benefit-wrapper:1395px;
+    --section-pricing-height:870px;
+    --color-primary: #08A6E4;
+    --color-primary-shadow:rgba(7,172,230, .16);
+    --color-redish:#FB3B64;
+    --color-green:#55dfb4;
+    --color-black:#000;
+    --color-gray:#a5a5a5;
+    --color-light-grey:#f7f7f7;
+    --color-white:#fff;
+    --color-blue:#07ACE6;
+    --font-open-sans:"Open Sans",Arial, sans-serif;
+    --font-raleway:"Raleway",Arial, sans-serif;
+    --open-sans-regular:400;
+    --open-sans-light:300;
+    --open-sans-bold:700;
+    --raleway-light:300;
+    --raleway-regular:400;
+    --raleway-bold:700;
+    --raleway-extra-bold:700;
+    --color-red-tick:#EB476E;
+    --html-font-size:16px; /* 1rem */
+    
+}

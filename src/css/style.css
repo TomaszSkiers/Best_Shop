@@ -1,46 +1,23 @@
+@import "variables.css";
+
+
 *{
     box-sizing: border-box;
 }
+html{
+    font-size: var(--html-font-size);
+    scroll-behavior: smooth;
+}
 body{
-    font-family: var(--font-open-sans);
-    font-size: 16px;
+    font-family: var(--font-open-sans);  
+     
 }
-/* do każdego elementu dodać klasę 
-nie stylować .class img */
-/* pomajstrować z max-width */
-/* poprawić bem */
-/* pozamieniać jednostki na rem em */
-/* h2 ostylować jedną klasą */
 
-:root{
-    --page-width: 1352px;
-    --benefit-container-width:1124px;
-    --benefit-container-height:370px;
-    --section-statistics-height: 530px;
-    --benefits-section-height: 1395px;
-    --section-benefit-width: 1124px; 
-    --section-benefit-height: 370px;
-    --section-benefit-wrapper:1395px;
-    --section-pricing-height:870px;
-    --color-primary: #08A6E4;
-    --color-primary-shadow:rgba(7,172,230, .16);
-    --color-redish:#FB3B64;
-    --color-green:#55dfb4;
-    --color-black:#000;
-    --color-gray:#a5a5a5;
-    --color-light-grey:#f7f7f7;
-    --color-white:#fff;
-    --color-blue:#07ACE6;
-    --font-open-sans:"Open Sans",Arial, sans-serif;
-    --font-raleway:"Raleway",Arial, sans-serif;
-    --open-sans-regular:400;
-    --open-sans-light:300;
-    --open-sans-bold:700;
-    --raleway-light:300;
-    --raleway-regular:400;
-    --raleway-bold:700;
-    --raleway-extra-bold:700;
-}
+/* tinker with a max-width */
+/* fix the BEM */
+
+
+
 a{
     text-decoration: none;
     cursor:pointer;
@@ -64,7 +41,7 @@ a{
     /* comes in header and footer */
     color: var(--color-primary);
     font-family: var(--font-raleway);
-    font-weight: var(--open-sans-light);
+    font-weight: var(--raleway-light);
 }
 
 /* ***** HEADER ***** */
@@ -83,7 +60,7 @@ a{
     align-items: center;
 }
 .header__logo{
-    font-size: 32px;
+    font-size: 2rem;
 }
 .header__nav__list{
     display: flex;
@@ -92,16 +69,23 @@ a{
 .header__nav__list li{
     /* height: 70px; */
     display: flex;
+    
 }
 .header__nav__list a{
-    font-size: 11px;
+    font-size: calc((11 / 16) * var(--html-font-size)); 
+    /* font-size: 11px */
+    /* font-size: 0.6875rem;   */
     letter-spacing: 3.28px;
-    font-family: var(--font-open-sans);
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-bold);
     text-transform: uppercase;
     color:var(--color-gray);
     padding: 30px 0;
     position: relative;
+
+    display: flex;  /* underline evenly under the text */
+    justify-content: center;
+    
 }
 .header__nav__list a:hover{
     color: var(--color-black);
@@ -128,15 +112,15 @@ a{
     /* background-size: contain; */
 }
 .sell__more__title, .title{
-    font-size: 49px;
+    font-size: 3.0625rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-regular);
     margin-top: 130px;
     margin-bottom: 20px;
 }
 .sell__more__text{
-    font-size: 16px;
-    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-regular);
     margin-bottom: 38px;
 }
@@ -147,7 +131,7 @@ a{
     align-items: center;
     width: 440px;
     height: 67px;
-    animation: pulse 1.5s infinite alternate; /* Animacja pulsowania */
+    animation: pulse 1.5s infinite alternate; /* pulse animation */
 }
 .sell__more__btn:hover{
     box-shadow: 0px 10px 20px 0px rgba(123, 206, 241, 1);
@@ -158,10 +142,10 @@ a{
 
 @keyframes pulse {
     0% {
-      transform: scale(1); /* Początkowy rozmiar */
+      transform: scale(1); /* initial */
     }
     100% {
-      transform: scale(1.02); /* Końcowy rozmiar */
+      transform: scale(1.02); /* end size */
     }
   }
 
@@ -193,7 +177,7 @@ a{
 }
 .statistics__title{
     font-family: var(--font-raleway);
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: var(--raleway-regular);
 }
 .statistic__box .circle{
@@ -210,13 +194,13 @@ a{
     transform: translate(0, -50%);
 }
 .statistic__box p:nth-of-type(1){
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-extra-bold);
     letter-spacing: 6px;
 }
 .statistic__box p:nth-of-type(2){
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-regular);
     color: var(--color-gray);
@@ -251,9 +235,9 @@ a{
     justify-content: space-between;
 }
 
-/*--- emementy wspólny dla każdego .benefit__description------  */
+/*--- common elements for the each .benefit__description------  */
 .benefit__description::before{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-regular);
 }
@@ -274,9 +258,7 @@ a{
     content: "Be always first";
 }
 .benefit__description--box__one{
-
     margin-left: 35px;
-
 }
 .benefit__description--box__one::after{
     border: 2px solid var(--color-redish);
@@ -304,7 +286,6 @@ a{
     transform: translate(-50%, 50%) rotate(45deg);
 }
 .benefit__photo{
-    /* wydzielić wspólne elementy i nadać box__one box__two */
     width: 387px;
     height: 219px;
     position: relative;
@@ -380,8 +361,8 @@ a{
 /* ***** pricing section ***** */
 
 .pricing{
-    width: 1266px;
-    height: 616px;
+    max-width: 1266px;/* this settings are better for RWD */
+    min-height: 616px;/* this settings are better for RWD */
     margin: 0 auto;
     /* border: 1px solid darkblue  ; */
     margin-top: 100px;
@@ -391,17 +372,20 @@ a{
 }
 .pricing__container{
     display: flex;
+    /* flex-wrap: wrap; *//* I've tried a little RWD here */
+    
+    justify-content: center;
     gap: 58px;
 }
 .pricing__title{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-regular);
     color: var(--color-black);
     margin-bottom: 5px;
 }
 
-.pricing__box{      /* -- ustawienia wspólne dla trzech boxów --- */
+.pricing__box{      /* -- common settings for the three boxes --- */
     width: 372px;
     height: 461px;
     border: 1px solid var(--color-green);
@@ -419,20 +403,21 @@ a{
     width: 405px;
     box-shadow: 5px 10px 27px #07ACE629;
 }
+
 .pricing__box--left{
     border-color: var(--color-redish);
 
 }
 .pricing__box__title{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-bold);
     color: #13253B;
     margin-top: 34px;
 }
 .pricing__box__price__line{
-    font-size: 46px;
-    font-family: var(--font-open-sans);
+    font-size: 2.875rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-light);
     color: var(--color-redish);
     margin-top: 14px;
@@ -447,7 +432,7 @@ a{
     margin-bottom: 80px;
 }
 .pr__box__line__0{
-    font-size: 12px;
+    font-size: 0.75rem;
     font-family: var(--font-raleway);
     font-weight: var(--raleway-bold);
     margin-top: 20px;
@@ -460,10 +445,10 @@ a{
 }
 
 
-.pr__box__line{         /* -- wspólne style */
-    font-family: var(--font-open-sans);
+.pr__box__line{         /* -- common styles -- */
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-regular);
-    font-size: 14px;
+    font-size: 0.875rem;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -483,15 +468,15 @@ a{
 }
 .pr__box__line--red_tick::before{
     content: "x";
-    border-color: #EB476E;
-    color: #EB476E;
+    border-color: var(--color-red-tick);
+    color: var(--color-red-tick);
 }
-.pr__box__btn{      /* -- wspólne style */
-    font-size: 13px;
-    font-family: var(--font-open-sans);
+.pr__box__btn{      /* -- common styles -- */
+    font-size: 0.8125rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-bold);
     padding: 16px 57px;
-    background-color: #EB476E;
+    background-color: var(--color-red-tick);
     border-radius: 23px;
     position: absolute;
     bottom: 0;
@@ -513,8 +498,6 @@ a{
     justify-content: center;
     margin-top: 155px;
     /* box-shadow: 0px -5px 40px #00000029; */
-
-
     /* border: 3px solid red; */
 }
 .contact__container{
@@ -541,15 +524,15 @@ a{
     margin: 0;
 }
 .con__txt{
-    font-size: 16px;
-    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-regular);
     color: var(--color-black);
     margin-top: 30px;
 }
 .con__con{
-    font-size: 16px;
-    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-bold);
     color: var(--color-gray);
     margin-top: 42px;
@@ -561,15 +544,17 @@ a{
     margin-left: 20px;
     margin-right: 10px;
 }
-/* custom checkbox **********************************/
+
+
+/* ------------ custom checkbox --------------------*/
+
 .inp{
-    font-size: 11px;
-    font-family: var(--font-open-sans);
+    font-size: 0.6875rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-bold);
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--color-primary);
- 
 }
 input[type="text"],
 input[type="email"]{
@@ -584,8 +569,8 @@ input[type="email"]{
     background-color: var(--color-primary);
     border-radius: 50px;
     align-self: flex-end;
-    font-size: 13px;
-    font-family: var(--font-open-sans);
+    font-size: 0.8125rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-bold);
     color: var(--color-white);
     margin-top: 10px;
@@ -603,8 +588,8 @@ input[type="email"]{
     position: relative;
     padding-left: 50px;
     cursor: pointer;
-    font-size: 12px;
-    font-family: var(--font-open-sans);
+    font-size: 0.75rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-regular);
     color: #707070;
     line-height: 17px;
@@ -624,23 +609,25 @@ input[type="email"]{
     transform: translateY(-50%);
     border: 2px solid #95989A;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 .custom-checkbox input[type="checkbox"]:checked + label::before {
     content: "\2713";
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: var(--open-sans-bold);
     color: var(--color-primary);
 }
-/* custom checkbox end  ************************* */
+/* ------------ custom checkbox end --------------------*/
+
+
 
 /* ***** footer section ***** */
 .footer{
     display: flex;
     justify-content: center;
     height: 90px;
-    background-color: #F7F7F7;
-    box-shadow: 0px -5px 40px #00000029;
+    background-color: var(--color-light-grey);
+    box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.161);
 
     /* margin-bottom: 600px; */
 }
@@ -671,14 +658,21 @@ input[type="email"]{
     width: 24px;
 }
 .foot__logo{
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 .foot__txt{
-    font-size: 11px;
-    font-family: var(--font-open-sans);
+    font-size: 0.6875rem;
+    /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-regular);
     color: var(--color-gray);
 }
 .foot__a{
     /* background-color: #55dfb4; */
 }
+
+
+
+
+/* **********************************************
+*****    end style.css file    ******************
+*************************************************/
