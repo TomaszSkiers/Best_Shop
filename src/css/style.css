@@ -608,6 +608,7 @@ input[type="email"]{
     font-weight: var(--open-sans-regular);
     color: #707070;
     line-height: 17px;
+    text-align: justify;
 }
 .custom-checkbox label::before {
     content: "";
@@ -631,5 +632,53 @@ input[type="email"]{
     font-weight: var(--open-sans-bold);
     color: var(--color-primary);
 }
-/* custom checkbox end  *************************** */
+/* custom checkbox end  ************************* */
 
+/* ***** footer section ***** */
+.footer{
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    background-color: #F7F7F7;
+    box-shadow: 0px -5px 40px #00000029;
+
+    /* margin-bottom: 600px; */
+}
+.footer__container{
+    width: var(--page-width);
+    display: flex;
+
+
+    /* border: 1px solid black; */
+}
+.foot__con{
+    display: flex;
+    width: 50%;
+}
+.foot__con--l{
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    /* background-color: greenyellow; */
+}
+.foot__con--r{
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px ;
+    /* background-color: rgb(212, 110, 228); */
+}
+.foot__img{
+    width: 24px;
+}
+.foot__logo{
+    font-size: 26px;
+}
+.foot__txt{
+    font-size: 11px;
+    font-family: var(--font-open-sans);
+    font-weight: var(--open-sans-regular);
+    color: var(--color-gray);
+}
+.foot__a{
+    /* background-color: #55dfb4; */
+}
