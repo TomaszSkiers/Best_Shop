@@ -1,0 +1,86 @@
+
+.buttonsBasic{
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 16px 56px;
+    border-radius: 60px;
+    background-color: var(--color-primary);
+}
+
+/* ----- sell more ---- */
+
+.sell__more__btn{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 67px;
+    animation: pulse 1.5s infinite alternate; /* pulse animation */
+}
+.sell__more__btn:hover{
+    box-shadow: 0px 10px 20px 0px rgba(123, 206, 241, 1);
+}
+.sell__more__btn:active{
+    background-color: #FB3B64;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1); /* initial */
+    }
+    100% {
+      transform: scale(1.02); /* end size */
+    }
+  }
+
+/* ----- pricing ----- */
+
+.pr__box__btn{      /* -- common styles -- */
+    font-size: 0.8125rem;
+    /* font-family: var(--font-open-sans); */
+    font-weight: var(--open-sans-bold);
+    padding: 16px 57px;
+    background-color: var(--color-red-tick);
+    border-radius: 23px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 50%);
+}
+.pr__box__btn--c{
+    background-color: var(--color-blue);
+    padding: 18px 64px;
+    border-radius: 32px;
+    box-shadow: 5px 10px 14px #07ACE629;
+}
+
+.pr__box__btn--r{
+    background-color: var(--color-green);
+}
+.pr__box__btn:hover{
+    transform: scale(1.05) translate(0, 50%);
+}
+.pr__box__btn:active{
+    color: var(--color-black);
+}
+/* -----  contact ----- */
+
+.contact__btn{
+    padding: 20px 100px;
+    border: none;
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    align-self: flex-end;
+    font-size: 0.8125rem;
+    /* font-family: var(--font-open-sans); */
+    font-weight: var(--open-sans-bold);
+    color: var(--color-white);
+    margin-top: 10px;
+    box-shadow: 5px 10px 14px #07ACE629;
+}
+.contact__btn:hover{
+    transform: scale(1.05);
+}
+.contact__btn:active{
+    color: var(--color-black);
+}

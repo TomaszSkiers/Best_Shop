@@ -1,5 +1,5 @@
 @import "variables.css";
-
+@import "buttons.css";
 
 *{
     box-sizing: border-box;
@@ -12,24 +12,14 @@ body{
     font-family: var(--font-open-sans);  
      
 }
-
-/* tinker with a max-width */
-/* fix the BEM */
-
-
-
 a{
     text-decoration: none;
     cursor:pointer;
 }
 
-.buttonsBasic{
-    color: var(--color-white);
-    text-decoration: none;
-    padding: 16px 56px;
-    border-radius: 60px;
-    background-color: var(--color-primary);
-}
+/* tinker with a max-width */
+/* fix the BEM */
+/* make hovers */
 
 .container{
     max-width: var(--page-width);
@@ -68,8 +58,7 @@ a{
 }
 .header__nav__list li{
     /* height: 70px; */
-    display: flex;
-    
+    display: flex;   
 }
 .header__nav__list a{
     font-size: calc((11 / 16) * var(--html-font-size)); 
@@ -124,30 +113,7 @@ a{
     font-weight: var(--open-sans-regular);
     margin-bottom: 38px;
 }
-.sell__more__btn{
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 440px;
-    height: 67px;
-    animation: pulse 1.5s infinite alternate; /* pulse animation */
-}
-.sell__more__btn:hover{
-    box-shadow: 0px 10px 20px 0px rgba(123, 206, 241, 1);
-}
-.sell__more__btn:active{
-    background-color: #FB3B64;
-}
-
-@keyframes pulse {
-    0% {
-      transform: scale(1); /* initial */
-    }
-    100% {
-      transform: scale(1.02); /* end size */
-    }
-  }
+/* styles for buttons are in buttons.css file */
 
 /* ***** statistics section ***** */
 
@@ -437,10 +403,10 @@ a{
     font-weight: var(--raleway-bold);
     margin-top: 20px;
 }
-.pr__box__line__0-c{
+.pr__box__line__0--c{
     margin-bottom: 70px;
 }
-.pr__box__line__0-r{
+.pr__box__line__0--r{
     margin-bottom: 48px;
 }
 
@@ -471,26 +437,8 @@ a{
     border-color: var(--color-red-tick);
     color: var(--color-red-tick);
 }
-.pr__box__btn{      /* -- common styles -- */
-    font-size: 0.8125rem;
-    /* font-family: var(--font-open-sans); */
-    font-weight: var(--open-sans-bold);
-    padding: 16px 57px;
-    background-color: var(--color-red-tick);
-    border-radius: 23px;
-    position: absolute;
-    bottom: 0;
-    transform: translate(0, 50%);
-}
-.pr__box__btn--c{
-    background-color: var(--color-blue);
-    padding: 18px 64px;
-    border-radius: 32px;
-    box-shadow: 5px 10px 14px #07ACE629;
-}
-.pr__box__btn--r{
-    background-color: var(--color-green);
-}
+
+/* ***** contact section ***** */
 
 .contact{
     width: 100%;
@@ -531,11 +479,14 @@ a{
     margin-top: 30px;
 }
 .con__con{
+
+    margin-top: 42px;
+}
+.con__con a{
     font-size: 1rem;
     /* font-family: var(--font-open-sans); */
     font-weight: var(--open-sans-bold);
     color: var(--color-gray);
-    margin-top: 42px;
 }
 .envelope{
     margin-right: 10px;
@@ -544,7 +495,7 @@ a{
     margin-left: 20px;
     margin-right: 10px;
 }
-
+/* styles for buttons are in buttons.css file */
 
 /* ------------ custom checkbox --------------------*/
 
@@ -563,19 +514,7 @@ input[type="email"]{
     border-bottom: 1px solid #95989A;
     margin-bottom: 35px;
 }
-.contact__btn{
-    padding: 20px 100px;
-    border: none;
-    background-color: var(--color-primary);
-    border-radius: 50px;
-    align-self: flex-end;
-    font-size: 0.8125rem;
-    /* font-family: var(--font-open-sans); */
-    font-weight: var(--open-sans-bold);
-    color: var(--color-white);
-    margin-top: 10px;
-    box-shadow: 5px 10px 14px #07ACE629;
-}
+
 .custom-checkbox input[type="checkbox"] {
     display: none;
 }
@@ -617,6 +556,7 @@ input[type="email"]{
     font-weight: var(--open-sans-bold);
     color: var(--color-primary);
 }
+/* ----- styles for button are in butttons.css file */
 /* ------------ custom checkbox end --------------------*/
 
 
