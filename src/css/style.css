@@ -74,10 +74,20 @@ a{
 
     display: flex;  /* underline evenly under the text */
     justify-content: center;
-    
+    transition: all .5s ease;
 }
 .header__nav__list a:hover{
     color: var(--color-black);
+    
+}
+.header__nav__list a::after {
+    content: "";
+    border: 2px solid transparent; /* Ustawiamy transparentną granicę początkową */
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s ease; /* Dodajemy transition dla wszystkich właściwości z 0.5 sekundowym czasem i łagodnym efektem */
 }
 .header__nav__list a:hover::after{
     content: "";
