@@ -1,0 +1,111 @@
+.header{
+    height: 70px;
+    box-shadow: 0 3px 6px rhba(0, 0, 0, 0.16);
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        background-color: rgba(48, 48, 48, 0.1); //temporarily
+
+    }
+    &__nav{             //.header nav
+        display: flex;
+        transition: 0.3s all ease-in-out;
+
+        @include mobile{
+            position: absolute;
+            left: 0;
+            top: 95px;
+            flex-direction: column;
+            background-color: $color-white;
+            width: 100%;
+            padding-bottom: 20px;
+            transform: translate(-100%, 0);
+            z-index: -2;
+            // display: none;
+            
+            .nav__element{
+                padding: 0;
+            }
+            .nav__link{// it have to be corected bordert-bottom in th last element or i have to  get rid of all border in mobile mode
+                display: block;
+                padding: 14px 20px;
+            }
+        }
+    }
+    .nav{   
+        &__element{
+            padding: 0 26px;
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+        &__link{
+            color: $color-gray;
+            font-weight: 700;
+            font-size: 0.6875rem;//rem=>16px
+            text-transform: uppercase;
+            padding: 28px 18px 22px;
+            border-bottom: 4px solid transparent;
+            letter-spacing: 0.1875rem;
+            
+            &:hover{
+                color: $color-black;
+                border-color: $color-primary;
+            }
+
+        }
+    }
+    .menu{
+        &__btn{
+            display: none;
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            opacity: 0;
+
+            @include mobile{
+                &:checked{
+                    ~ .header__nav{
+                        // display: flex;
+                        transform: translate(0, 0);
+                    }
+                    ~ .menu__toggle{
+                        span{
+                            &:nth-child(1){
+                                transform: rotate(45deg) translate(2px, 5px);
+                            }
+                            &:nth-child(2){
+                                opacity: 0;
+                            }
+                            &:nth-child(3){
+                                transform: rotate(-45deg) translate(2px, -5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__toggle{
+            display: none;
+
+            span{
+                display: block;
+                width: 20px;
+                height: 2px;
+                margin-bottom: 3px;
+                background-color: $color-primary;
+                transition: 0.3s all ease-in-out;
+                
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            @include mobile{
+                display: block;
+            }
+        }
+    }
+}

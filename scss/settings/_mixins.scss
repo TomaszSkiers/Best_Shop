@@ -1,0 +1,11 @@
+@mixin notebook{
+    @media screen and (max-width: 1352px) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width: 792px) {
+        @content;
+    }
+}
