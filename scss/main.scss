@@ -1,4 +1,7 @@
 @import "generic/reset";
-@import "settings";     //here's interesting because it import all files inside this folder
+@import "settings";     
 @import "elements/base";
+@import "elements/buttons";
 @import "elements/header";
+@import "elements/opening";
+@import "elements/statistics";
