@@ -71,4 +71,37 @@
             }
         }
     }
+    &__double{
+        display: flex;
+
+        > div{
+            margin-bottom: 0;
+        }
+
+        .benefits__single--solo{
+            max-width: 620px;
+
+            .benefits__text{
+                max-width: none;
+                margin: 70px 35px;
+            }
+        }
+
+        .benefits__single--image{
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-green;
+            border: none;
+            margin-left: 60px;
+
+            img{
+                width: 295px;
+                height: auto;
+                margin-top: 55px;
+            }
+        }
+    }
+    // &__text  <-- tu koniec  roboty
 }
