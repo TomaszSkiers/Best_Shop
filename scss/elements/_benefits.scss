@@ -1,0 +1,74 @@
+.benefits{
+    padding: 100px 0;
+    background-color: $color-light-gray;
+
+    &__container{
+        padding: 0 100px;
+    }
+
+    &__single{
+        background-color: $color-white;
+        border: 1px solid #e8e9ed;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 38px;
+        border-radius: 5px;
+
+        &--notebook{
+            .benefits__image{       //div .benefits__image
+                margin-right: 117px;
+                margin-bottom: 38px;
+                position: relative;
+
+                &::before{
+                    content: "";
+                    width: 180px;
+                    height: 180px;
+                    background-color: $color-redish;
+                    display: block;
+                    border-radius: 40px;
+                    position: absolute;
+                    right: 0;
+                    top: -40px;
+                    transform: rotate(45deg);
+                }
+
+                img{
+                    width: 386px;
+                    height: auto;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+        &--phone{
+            flex-direction: row-reverse;
+            padding: 0 20px 0 70px;
+            position: relative;
+
+            .benefits__image{
+                &::before{
+                    content: "";
+                    width: 320px;
+                    height: 320px;
+                    background-color: $color-primary;
+                    display: block;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: -20px;
+                }
+                img{
+                    width: 426px;
+                    height: auto;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+            .benefits__text{
+                margin: 70px 0;
+            }
+        }
+    }
+}
