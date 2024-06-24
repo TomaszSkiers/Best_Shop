@@ -3,8 +3,18 @@
     display: flex;
     justify-content: center;
 
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 15px;
+    }
+
     &__column{
         width: 50%;
+
+        @include tablet{
+            width: 100%;
+        }
     }
     &__title{
         font-size: 3.0625rem;
@@ -14,6 +24,10 @@
         margin: 22px;
         font-size: 1rem;
         line-height: 1.365rem;
+
+        @include tablet{
+            margin: 5px 0 35px;
+        }
     }
     &__details{
         display: flex;
@@ -22,6 +36,10 @@
         align-items: center;
         // border: 1px solid red;//auxiliary border
 
+        @include tablet{
+            flex-direction: column;
+            align-items: flex-start;
+        }
         .details__item{
             color: $color-gray;
             font-weight: 500;
@@ -30,6 +48,10 @@
             }   
             img{
                 margin-right: 10px;
+            }
+
+            @include tablet{
+                margin-bottom: 10px;
             }
         }
     }
