@@ -172,6 +172,72 @@
         </div>
     </section>
 
+    <section class="calc " id="calc">
+
+        <h2 class="calc__title ">Calculate how much you'll pay</h2>
+
+        <div class="calc__wrapper container">
+            <div class="calc__wrapper__column">
+                <input class="products column__input" type="number" min="1" step="1"
+                    placeholder="products quantity">
+                <input class="orders column__input" type="number" min="1" step="1"
+                    placeholder="estimated orders in month">
+                <label class="package__label" for="package__check">choose package
+                    <input type="checkbox" class="package__check" id="package__check">
+                    <div class="circle">
+                        <div class="square"></div>
+                    </div>
+                    <div class="list">
+                        <p>Basic</p>
+                        <p>Professional</p>
+                        <p>Premium</p>
+                    </div>
+                </label>
+
+                <label class="label_tick_one">
+                    <input class="tick__one" type="checkbox" >
+                    <span class="span_tick_one"></span>
+                    <p class="text">accounting</p>
+                </label>
+                <label class="label_tick_one">
+                    <input class="tick__one" type="checkbox" >
+                    <span class="span_tick_one"></span>
+                    <p class="text">rental of a payment terminal</p>
+                </label>
+                
+               
+            </div>
+
+            <div class="calc__wrapper__column">
+                <div class="green__test">
+                    <span class="products">Products</span>
+                    <span class="multiplier">10 * $0.5</span>
+                    <span class="amount">$5.00</span>
+                </div>
+                <div class="green__test">
+                    <span class="orders">Orders</span>
+                    <span class="multiplier">10 * $0.5</span>
+                    <span class="amount">$5.00</span>
+                </div>
+                <div class="green__test">
+                    <span class="package">Package</span>
+                    <span class="selectedPackage"></span>
+                    <span class="amount">$5.00</span></div>
+                <div class="green__test">
+                    <span class="Accounting">Accounting</span>
+                    <span class="amount">$5.00</span></div>
+                <div class="green__test">
+                    <span class="orders">Terminal</span>
+                    <span class="amount">$5.00</span></div>
+                <div class="green__test green__test--last">
+                    <span class="total">Total</span>
+                    <span class="amount">$0</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <section class="contact container" id="contact">
 
         <div class="contact__column">
@@ -233,5 +299,6 @@
     </div>
 </footer>
 </main>
+<script src="./js/app.js"></script>
 </body>
 </html>
