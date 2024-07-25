@@ -13,5 +13,10 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: "/Best_Shop/" // <===== tutaj nazwa naszego repozytorium
+  base: "/Best_Shop/" ,// <===== tutaj nazwa naszego repozytorium
+  base: './', // Use relative paths
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 });
