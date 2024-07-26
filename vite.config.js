@@ -15,6 +15,14 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: "/Best_Shop/dist/" // <===== tutaj nazwa naszego repozytorium
-  
+  base: './', // Ensure relative base path
+  build: {
+    outDir: 'dist', // Output directory
+    assetsDir: 'assets', // Directory for assets within the output directory
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[hash][extname]', // Control asset filenames
+      },
+    },
+  },
 });
